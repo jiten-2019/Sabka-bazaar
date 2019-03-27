@@ -1,0 +1,23 @@
+{
+  "name": "sabka-bazaar",
+  "version": "1.0.0",
+  "description": "sabka bazaar",
+  "main": "\u001b[A\u001b[B",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiten-2019/Sabka-bazaar.git"
+  },
+  "author": "jitendra\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[Ce\u001b[r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiten-2019/Sabka-bazaar/issues"
+  },
+  "homepage": "https://github.com/jiten-2019/Sabka-bazaar#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
