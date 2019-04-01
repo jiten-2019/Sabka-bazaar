@@ -3857,7 +3857,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n//import num from './test.js'\nvar x = 15;\n\nconsole.log('First Javascript code from imported moduklle ' + x);\n\nconsole.log('Happy code code');\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("\n\nvar icon = document.getElementById(\"hamburger-icon\");\nvar menu = document.getElementById(\"mobile-nav\");\nconsole.log(menu);\nicon.addEventListener('click', function (e) {\n    e.preventDefault();\n    if (icon.classList.contains(\"open\")) {\n        icon.classList.remove('open');\n        menu.classList.remove('open');\n    } else {\n        icon.classList.add('open');\n        menu.classList.add('open');\n    }\n    //icon.classList.toggle('open'); \n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
