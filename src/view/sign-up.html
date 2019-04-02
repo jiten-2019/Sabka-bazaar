@@ -7,32 +7,48 @@
     <body>
 
         <header>
-            <div class="container flex" id="myNavbar">
-                <nav>
-                    <div class="row">
-                        <img src="assets/images/logo.png" alt=" logo" class="logo">
-                        <ul class="main-nav js--main-nav bottom-xs">
-                            <li><a href="home.html" class="">Home</a></li>
-                            <li><a href="plp.html" class=""> Product</a></li>
-                        </ul>
-                      </div>
-                </nav>
-            
-                <div class="header-right">
-                    <a href="sign-in.html" class=""> SignIn</a>
-                    <a href="sign-up.html" class=""> Register</a>
-
-                    <div class="cart">
-                       <span>0 item</span>
+                <div class="container flex" id="navbar">
+                    <nav>
+                        <div class="row">
+                            <img src="assets/images/logo.png" alt=" logo" class="logo">
+                            <ul class="main-nav bottom-xs xs-hide">
+                                <li><a href="index.html" class="">Home</a></li>
+                                <li><a href="plp.html" class=""> Product</a></li>
+                            </ul>
+                          </div>
+                    </nav>
+                
+                    <div class="header-right">
+                        <a href="sign-in.html" class="xs-hide"> SignIn</a>
+                        <a href="sign-up.html" class="xs-hide"> Register</a>
+    
+                        <div class="cart">
+                            <img src="./assets/images/cart.svg" alt=""> 
+                            <span class="xs-show item-in-cart"> 0</span>
+                            <span class="xs-hide">0 item</span>
+                            <div id="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+    
+                            <ul class="main-nav js--main-nav bottom-xs" id="mobile-nav">
+                                <li><a href="index.html" class="">Home</a></li>
+                                <li><a href="plp.html" class=""> Product</a></li>
+                                <li><a href="sign-in.html" class=""> Signin</a></li>
+                                <li><a href="sign-up.html" class=""> Signup</a></li>
+    
+                            </ul>
+    
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
         <section class="login-section mt-30 mb-15">
             <div class="container " >
                 <div class="sign-up flex">
-                    <div>
+                    <div class="mt-20">
                         <h2>Signup</h2>
                         <p>We do not share your personal details with anyone. </p>
                     </div>

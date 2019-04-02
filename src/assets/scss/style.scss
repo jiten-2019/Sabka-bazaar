@@ -204,7 +204,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
   // background: #EEE;
 	line-height: 1rem;
@@ -280,9 +280,13 @@ header{
 				position: absolute;
 				top: 4px;
 				left: 22px;
-				color: #50dae3;
-				font-size: 85%;
+				color: #ffffff;
+				font-size: 100%;
 				font-weight: 700;
+				background: #50dae2;
+				padding: 5px;
+				border-radius: 50%;
+				width: 25px;
 			}
 		}
 	}
@@ -499,11 +503,14 @@ button:hover {
 		align-self: flex-start;
 		justify-content: space-around;
 	}
+	.sign-up div:first-child{
+		align-self: auto;
+	}
 }
 .sign-up{
 	width: 70%;
 	p{
-		font-size: 85%;
+		font-size: 100%;
 		color: #000;
 	}
 }
@@ -551,7 +558,7 @@ button:hover {
 		width: auto;
 	}
 	p{
-		font-size: 75%;
+		font-size: 85%;
 	}
 
 	.box-shadow {
@@ -664,7 +671,8 @@ button:hover {
 .plp-nav{
 	width: 300px;
     background: #eeeeee;
-    margin-right: 20px;
+		margin-right: 20px;
+		flex: 0 0 23%;
 	ul li{
 		list-style: none;
 		list-style: none;
@@ -713,7 +721,7 @@ button:hover {
 			font-size: 90%;
 		}
 		img{
-			max-width: 208px;
+			max-width: 100%;
 			margin-bottom: 5px;
 		}
 		p{
@@ -723,15 +731,17 @@ button:hover {
 		}
 		button{
 			width: auto;
-			margin-top: 12px;
+			margin-top: 0;
 			font-size: 90%;
 		}
 		.product-mrp{
+			margin-top: 12px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			button{
 				align-self: flex-end;
+				// width: 100%;
 			}
 		}
   }
@@ -743,7 +753,7 @@ button:hover {
     border-bottom: 2px solid #ddd;
     background: #fff;
 	border-style: dotted;
-	max-width: 208px;
+	max-width: 23%;
 	
   }
   .flex-grid > div:nth-child(4n+4){
@@ -783,11 +793,11 @@ button:hover {
   @media (max-width: 1000px) { 
   
 	.flex-grid {
-	  flex-direction: column;
+	  // flex-direction: column;
 	}
-  
+
 	.flex-grid > div {
-	  margin-right: 0;
+	  margin-right: 16px;
 	}
   
   }
@@ -798,8 +808,8 @@ button:hover {
 	}
 	
 #hamburger-icon {
-	width: 28px;
-	height: 25px;
+	width: 25px;
+	height: 13px;
 	position: relative;
 	margin: 0px auto;
 	-webkit-transform: rotate(0deg);
@@ -816,7 +826,7 @@ button:hover {
 #hamburger-icon span{
   display: block;
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
   background: #d00256;
   border-radius: 9px;
@@ -838,11 +848,11 @@ button:hover {
 }
 
 #hamburger-icon span:nth-child(2) {
-  top: 10px;
+  top: 7px;
 }
 
 #hamburger-icon span:nth-child(3) {
-  top: 20px;
+  top: 14px;
 }
 
 #hamburger-icon.open span:nth-child(1) {
@@ -981,16 +991,54 @@ button:hover {
     text-align: center;
     font-size: 140%;
     line-height: 139%;
-    padding: 12px;
+		padding: 12px;
+	
 			li{
 				list-style-type: none;
+				border-top: 1px solid #dad0d0;
+				transition: all 0.3s ease;
 				a{
 					cursor: pointer;
+				}
+			}
+			li:last-child{
+				border-bottom: 1px solid #dad0d0;
+			}
+			li:hover{
+				background: #d00256;
+				a{
+					color: #fff;
+					font-weight: 700;
 				}
 			}
 		
 	}
 
+	.plp-section{
+		.wrapper {
+			flex-direction: column;
+			.plp-nav {
+				width: 100%;
+				background: #eeeeee;
+				margin-right: 0;
+				flex: 0;
+			}
+			.plp-list{
+				display: flex;
+				max-width: 100%;
+				flex-direction: column;
+				margin-right: 0;
+				.product{
+					display: flex;
+					img {
+						max-width: 45%;
+						margin-bottom: 5px;
+						align-self: center;
+					}
+				}
+			}
+		}
+	}
 
 }
 
@@ -1009,6 +1057,80 @@ button:hover {
 	}
 }
 
+@media screen and (min-width:768px) and (max-width:992px){
+	.container {
+    padding: 0;
+	}
+	.plp-section{
+		.wrapper{
+			.plp-nav {
+				margin-right: 12px;
+			}
+			.flex-grid{
+				.product{
+					position: relative;
+				}
+				p {
+					min-height: 120px;
+				}
+				.product-mrp{
+					margin-top: 12px;
+					position: absolute;
+					width: 100%;
+					left: 0;
+					bottom: 0;
+					.sm-hide{
+						display: none;
+					}
+					.sm-show{
+						display: inline;
+					}
+					button{
+						 width: 100%;
+					}
+				}
+			}
+		}
+		.plp-list {
+			display: flex;
+			max-width: 50%;
+			flex-direction: column;
+			margin-right: 0;
+			padding: 10px;
+			border-right: 4px solid #fdf6f6;
+			
+			.product {
+				display: flex;
+				min-height: 165px;
+			}
+			.product img {
+				max-width: 45%;
+				margin-bottom: 5px;
+				align-self: flex-start;
+			}
+		}
+		.plp-list:nth-child(2n+2){
+			border-right: 0px solid #fdf6f6;
+		}
+	}
+}
+
+@media screen and (max-width:480px){
+	.plp-section{
+		.wrapper{
+			.flex-grid{
+				.product-mrp{
+					margin-top: 45px;
+					button{
+						 width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.aside { flex: 1 0 0; }
 @media screen and (min-width:768px){
 
 	header {
@@ -1033,6 +1155,9 @@ button:hover {
 // Margin-padding
 .mt-15{
 	margin-top:15px;
+}
+.mt-20{
+	margin-top:20px;
 }
 .mt-25{
 	margin-top:25px;
