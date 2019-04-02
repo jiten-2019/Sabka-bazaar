@@ -312,9 +312,9 @@ header nav .row{
 header nav .row ul{
 	list-style: none;
 	align-self: flex-end;
-	margin-left: 50px;
+	margin-left: 12%;
 	flex-grow: 1;
-	margin-bottom: 10px;
+	margin-bottom: 14px;
 		li{
 			list-style: none;
 			display: inline-block;
@@ -336,6 +336,108 @@ header div{
 header>div:last-child {
   align-self: flex-end;
 }
+
+
+// modal css
+/* The Modal (background) */
+.cart img{
+	cursor: pointer;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	.modal-content {
+		position: relative;
+		background-color: #fefefe;
+		margin: auto;
+		padding: 0;
+		border: 1px solid #888;
+		width: 80%;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		-webkit-animation-name: animatetop;
+		-webkit-animation-duration: 0.4s;
+		animation-name: animatetop;
+		animation-duration: 0.4s;
+		height:80vh;
+		width:40%;
+		.modal-header{
+			padding: 2px 16px;
+			background-color: black;
+			color: white;
+			h2{
+				color: #fff;
+			}
+			.close {
+				color: white;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				margin-top: 8px;
+			}
+			.close:hover,
+			.close:focus {
+				color: #fff;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+		}
+
+		.modal-body {
+			position: absolute;
+				/* color: #fff; */
+				top: 50%;
+				left: 50%;
+				padding: 1px;
+				-ms-transform: translateX(-50%) translateY(-50%);
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+				text-align: center;
+		}
+		.modal-footer {
+			padding: 2px 16px;
+			background-color: #d00155;
+			color: white;
+			position: absolute;
+			width: 94%;
+			bottom: 19px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+			h3{
+				color: #fff;
+				text-align: center;
+			}
+		}
+	}
+}
+
+/* Modal Content */
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+
+
 
 
 .col-md-2 {
@@ -673,12 +775,26 @@ button:hover {
     background: #eeeeee;
 		margin-right: 20px;
 		flex: 0 0 23%;
-	ul li{
+	ul {
+		margin-top: 6px;
+	li{
 		list-style: none;
 		list-style: none;
 		padding: 9px 25px;
 		border-bottom: 1px solid #e1d5d5;
+		transition: all 0.3s ease;
+		a{
+			cursor: pointer;
+		}
 	}
+	li:hover{
+		background: #d00256;
+		a{
+			color: #fff;
+			font-weight: 700;
+		}
+	}
+}
 }
 .product-list{
 	display: flex;
@@ -879,6 +995,14 @@ button:hover {
 
 
 /******* Media queries ***********/
+@media screen and (max-width:992px){
+	.login-section{
+	.sign-up{
+			width:95%;
+		}
+	}
+}
+
 @media ( max-width:350px ) {
 	form {
 		width: 100%;
@@ -895,6 +1019,11 @@ button:hover {
 	display: none;
 }
 @media ( max-width:767px ) {
+	.login-section{
+		.sign-up div:first-child{
+				width:100%;
+			}
+		}
 	.xs-show{
 		display: inline-block;
 	}
@@ -1039,6 +1168,11 @@ button:hover {
 			}
 		}
 	}
+	.modal {
+		.modal-content {
+			width: 300px;
+		}
+	}
 
 }
 
@@ -1130,6 +1264,7 @@ button:hover {
 	}
 }
 
+
 .aside { flex: 1 0 0; }
 @media screen and (min-width:768px){
 
@@ -1142,7 +1277,7 @@ button:hover {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			/* flex-basis: 36%; */
+			margin-top: 15px;
 			width: 115px;
 			img{
 				width: 35px;
@@ -1151,6 +1286,7 @@ button:hover {
 
 	}
 }
+
 
 // Margin-padding
 .mt-15{
